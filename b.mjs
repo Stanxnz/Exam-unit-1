@@ -27,16 +27,24 @@ function formatName(name) {
     const capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
     return capitalizedWords.join(" ");
 }
-
 //#endregion
 
-
-
-
-
 //#region Tests --------------------------------------------------------------------
-// Write your tests her.
+const tests = test("FormatName function");
 
+tests.isEqual(formatName(14), null, "Non-string input (number) should return null");
+tests.isEqual(formatName({}), null, "Non-string input (object) should return null");
 
+tests.isEqual(formatName("   "), "", "Input with only spaces should return an empty string");
 
+tests.isEqual(formatName("stan"), "Stan", 'Input "stan" should return "Stan"');
+
+tests.isEqual(formatName("  stan the man "), "Stan The Man", 'Input "  stan the man " should return "Stan The Man"');
+
+tests.isEqual(formatName("stan   lenthe"), "Stan Lenthe", 'Input "stan   lenthe" should return "Stan Lenthe"');
+
+tests.isEqual(formatName("sTAN tHe MaN"), "Stan The Man", 'Input "sTAN tHe MaN" should return "Stan The Man"');
+
+tests.isEqual(formatName("stan@the@man"), null, 'Input "stan@the@man" should return null');
+tests.isEqual(formatName("stan#the#man"), null, 'Input "stan#the#man" should return null');
 //#endregion

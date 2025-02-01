@@ -36,10 +36,6 @@ function multiply(...numbers){
 }
 //#endregion
 
-
-
-
-
 //#region Tests --------------------------------------------------------------------
 const tests = test("Multiply function");
 
