@@ -49,5 +49,4 @@ tests.isEqual(sequence(-1), null, "Negative input should return null");
 tests.isEqual(sequence(1.5), null, "Non-integer input should return null");
 tests.isEqual(sequence("5"), null, "String input should return null");
 tests.isEqual(sequence(null), null, "Null input should return null");
-
 //#endregion

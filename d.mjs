@@ -21,7 +21,6 @@ import test from "./test.mjs";
 */
 
 //#region function -----------------------------------------------------------------
-
 function guessNumber(target, guess) {
     if (typeof target !== "number" || !Number.isInteger(target) || typeof guess !== "number" || !Number.isInteger(guess)){
         return null;
@@ -34,7 +33,6 @@ function guessNumber(target, guess) {
         return "Correct!";
     }
 }
-
 //#endregion
 
 //#region Tests --------------------------------------------------------------------
@@ -57,5 +55,4 @@ tests.isEqual(guessNumber(11, undefined), null, "Undefined guess input should re
 tests.isEqual(guessNumber(11, 11), "Correct!", "For n = 0 and guess 0, should return 'Correct!'");
 tests.isEqual(guessNumber(-11, -14), "Too low", "For target -5 and guess -10, should return 'Too low'");
 tests.isEqual(guessNumber(-14, -11), "Too high", "For target -10 and guess -5, should return 'Too high'");
-
 //#endregion
